@@ -1,0 +1,51 @@
+{
+  "_comment": "Бір ғана шындық көзі: анимация да, binaural SFX те осыдан құрылады. Уақыт — видеоның өз секундтары, орын — кадр ортасынан ығысу (px, 1920×1080).",
+  "video": "base.mp4",
+  "duration": 30.0,
+  "fps": 60,
+  "font": {"family": "Inter Tight", "files": [["InterTight-VF.ttf", "100 900"]]},
+  "colors": {"text": "#FFFFFF", "accent": "#D8F868", "negative": "#E80820", "ink": "#141414"},
+  "camera": {
+    "style": "ease",
+    "pan": 0.9,
+    "microPush": 0.018,
+    "states": {
+      "C": {"s": 1.0, "x": 0, "y": 0},
+      "S": {"s": 1.18, "x": -160, "y": -12},
+      "P": {"s": 1.26, "x": -245, "y": -30}
+    },
+    "keys": [[0, "C"], [1.6, "S"], [9.4, "C"], [13.4, "S"], [17.0, "P"], [20.6, "S"], [25.2, "C"]]
+  },
+  "scenes": [
+    {"name": "Hook", "from": 0, "to": 9.6},
+    {"name": "Proof", "from": 9.6, "to": 20.8},
+    {"name": "Reframe", "from": 20.8, "to": 30.0}
+  ],
+  "items": [
+    {"type": "list", "dx": 220, "dy": -250, "gap": 88, "until": 5.6,
+     "items": [{"t": 2.0, "n": "01", "text": "НЕДЕН БАСТАУ"}, {"t": 2.8, "n": "02", "text": "НЕ БІЛУ КЕРЕК"}, {"t": 3.6, "n": "03", "text": "ҚАНДАЙ ҚАБІЛЕТ"}]},
+
+    {"type": "counter", "t": 5.9, "until": 9.2, "dx": 490, "dy": -100, "label": "ТАБЫС", "countFrom": 6.0, "v0": 500000, "v1": 1000000,
+     "dur": 1.25, "suffix": " ₸", "plusAt": 7.8, "size": 104, "color": "text"},
+
+    {"type": "lowerThird", "t": 9.8, "until": 13.0, "dx": -560, "dy": -70, "name": "Атыңыз", "role": "Маркетолог · 4 жыл тәжірибе", "roleAt": 10.4},
+
+    {"type": "logos", "labelAt": 13.6, "label": "СЕРІКТЕСТЕР", "until": 16.6, "dx": 490, "dy": -70, "size": 225, "cols": 2,
+     "items": [{"t": 14.0, "file": "logo_a.svg"}, {"t": 14.6, "file": "logo_b.svg"}]},
+
+    {"type": "counter", "t": 17.3, "until": 20.4, "dx": 490, "dy": -120, "countFrom": 17.45, "v0": 0.1, "v1": 5, "dur": 1.0,
+     "format": "decimal", "suffix": " МЛРД ₸", "plusAt": 18.6, "size": 112, "color": "accent", "hero": true,
+     "sub": {"text": "ЖАЛПЫ ТАБЫС", "at": 18.9}},
+
+    {"type": "strike", "t": 21.4, "redAt": 22.0, "until": 25.0, "dx": -325, "dy": -20, "text": "АҚША ТАБУ"},
+    {"type": "text", "t": 23.2, "until": 25.0, "dx": 495, "dy": -55, "text": "АДАМДАРҒА", "size": 66, "color": "accent"},
+    {"type": "text", "t": 23.25, "until": 25.0, "dx": 495, "dy": 20, "text": "ПАЙДА", "size": 66, "color": "accent"},
+
+    {"type": "checks", "dx": 218, "dy": -115, "gap": 80, "checksAt": 28.4, "until": 29.4,
+     "items": [{"t": 25.8, "text": "САТУ"}, {"t": 26.5, "text": "ӨНІМДІ ЖЕТКІЗУ"}, {"t": 27.2, "text": "КЛИЕНТКЕ ПАЙДА"}]}
+  ],
+  "sfx": {
+    "_comment": "Қосымша қолмен қойылатын SFX (автоматтыдан бөлек). type: whoosh|swish|pop|tick|bell|impact|riser|click|glitch|powerdown|pad",
+    "extra": []
+  }
+}

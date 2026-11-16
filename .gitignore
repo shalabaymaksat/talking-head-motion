@@ -1,0 +1,10 @@
+node_modules/
+template/out/
+template/public/base.mp4
+work/
+out/
+*.wav
+*.mp4
+*.mov
+.DS_Store
+build/
